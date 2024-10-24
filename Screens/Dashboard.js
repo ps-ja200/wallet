@@ -1,14 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { AntDesign } from '@expo/vector-icons';
+import Ionicons from '@expo/vector-icons/Ionicons'; // Correct icon import
+import { AntDesign } from '@expo/vector-icons'; // Correct AntDesign import
+
 const Dashboard = () => {
   return (
     <ScrollView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
         <Text style={styles.headerText}>Dashboard</Text>
-        <Icon name="person-circle-outline" size={40} color="#fff" />
+        <Ionicons name="person-circle-outline" size={40} color="#fff" /> {/* Corrected Icon */}
       </View>
 
       {/* Balance Section */}
@@ -16,7 +17,7 @@ const Dashboard = () => {
         <Text style={styles.greetingText}>Hi, Danish!</Text>
         <Text style={styles.balanceText}>Total Balance</Text>
         <Text style={styles.amountText}>₹16551</Text>
-        <Icon name="notifications-outline" size={25} color="#fff" style={styles.notificationIcon} />
+        <Ionicons name="notifications-outline" size={25} color="#fff" style={styles.notificationIcon} /> {/* Corrected Icon */}
       </View>
 
       {/* Buttons */}
@@ -47,7 +48,7 @@ const Dashboard = () => {
           { name: 'Hiba Saleh', date: 'Oct 04, 05:45 AM', amount: '₹56' }
         ].map((item, index) => (
           <View key={index} style={styles.transactionItem}>
-            <Icon name="person-circle-outline" size={40} color="#000" />
+            <Ionicons name="person-circle-outline" size={40} color="#000" /> {/* Corrected Icon */}
             <View style={styles.transactionDetails}>
               <Text style={styles.transactionName}>{item.name}</Text>
               <Text style={styles.transactionDate}>{item.date}</Text>
